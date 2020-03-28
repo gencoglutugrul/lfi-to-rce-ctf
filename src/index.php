@@ -1,3 +1,10 @@
+<?php 
+// start session for session stored rce
+session_start();
+if(isset($_POST["user"])){
+  $_SESSION["user"] = $_POST["user"];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +64,27 @@
       <!-- Content section -->
       <section class="py-5">
         <div class="container">
-          <h1>Welcome The Doors Lover!</h1>
+          <h1><?php echo isset($_SESSION["user"]) ? "Hello, ".$_SESSION["user"] : "Hello i love you" ; ?></h1>
+          <?php if(!isset($_SESSION["user"])){ ?>
+
+            <p class="lead">Won't you tell me your name?</p>
+          
+              <form method="POST">
+                <input name="user" type="text" placeholder="mr mojo risin"> <input type="submit" value="Tell me!">
+              </form>
+          <?php }else{ ?>
+
+              <p class="lead">Lorem ipsum dolor sit amet.</p>
+          
+          <?php } ?>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+        </div>
+      </section>
+
+      <!-- Content section -->
+      <section class="py-5">
+        <div class="container">
+          <h1>Hey Doors Lover!</h1>
           <p class="lead">Please don't hack us if you love The Doors.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
         </div>
