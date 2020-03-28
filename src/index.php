@@ -15,7 +15,7 @@ if(isset($_POST["user"])){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Full Width Pics - Start Bootstrap Template</title>
+  <title>Doors Fan Website with PHP-Session!</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@ if(isset($_POST["user"])){
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">The Doors Fan Page</a>
+      <a class="navbar-brand" href="/">The Doors Fan Page</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,16 +66,12 @@ if(isset($_POST["user"])){
         <div class="container">
           <h1><?php echo isset($_SESSION["user"]) ? "Hello, ".$_SESSION["user"] : "Hello i love you" ; ?></h1>
           <?php if(!isset($_SESSION["user"])){ ?>
-
-            <p class="lead">Won't you tell me your name?</p>
-          
+              <p class="lead">Won't you tell me your name?</p>
               <form method="POST">
                 <input name="user" type="text" placeholder="mr mojo risin"> <input type="submit" value="Tell me!">
               </form>
           <?php }else{ ?>
-
               <p class="lead">Lorem ipsum dolor sit amet.</p>
-          
           <?php } ?>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
         </div>
