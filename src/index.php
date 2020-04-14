@@ -64,7 +64,7 @@ if(isset($_POST["user"])){
       <!-- Content section -->
       <section class="py-5">
         <div class="container">
-          <h1><?php echo isset($_SESSION["user"]) ? "Hello, ".$_SESSION["user"] : "Hello i love you" ; ?></h1>
+          <h1><?php echo isset($_SESSION["user"]) ? "Hello, ".htmlentities($_SESSION["user"]) : "Hello i love you" ; ?></h1>
           <?php if(!isset($_SESSION["user"])){ ?>
               <p class="lead">Won't you tell me your name?</p>
               <form method="POST">
