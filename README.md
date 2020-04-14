@@ -6,8 +6,6 @@ $ sudo docker build -t my-php-app .
 # Run Container
 ```
 $ sudo docker run -d --name my-running-app my-php-app
-
-ba9f2ada7228.............................
 ```
 
 # Hack It!
