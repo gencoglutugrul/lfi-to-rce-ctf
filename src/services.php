@@ -2,7 +2,7 @@
    <section class="py-5">
         <div class="container">
           <h1>Our services!</h1>
-          <p class="lead">We are not serve too many things.</p>
+          <p class="lead">We do not serve too many things.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
         </div>
       </section>
